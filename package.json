@@ -2,7 +2,7 @@
   "name": "aiesec",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://pushkar2gr8.github.io/aiesec_challenge/",
+  "homepage": "https://pushkar2gr8.github.io/aiesec_challenge/index.html",
   "dependencies": {
     "@material-ui/core": "^3.5.1",
     "gh-pages": "^2.0.1",
