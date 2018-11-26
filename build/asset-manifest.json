@@ -1,15 +1,15 @@
 {
-  "main.css": "/pushkar2gr8/aiesec_challenge/tree/gh-pages/index.html/static/css/main.9e02ac53.chunk.css",
-  "main.js": "/pushkar2gr8/aiesec_challenge/tree/gh-pages/index.html/static/js/main.f4feb128.chunk.js",
-  "main.js.map": "/pushkar2gr8/aiesec_challenge/tree/gh-pages/index.html/static/js/main.f4feb128.chunk.js.map",
-  "static/css/1.468c7371.chunk.css": "/pushkar2gr8/aiesec_challenge/tree/gh-pages/index.html/static/css/1.468c7371.chunk.css",
-  "static/js/1.697ed8e1.chunk.js": "/pushkar2gr8/aiesec_challenge/tree/gh-pages/index.html/static/js/1.697ed8e1.chunk.js",
-  "static/js/1.697ed8e1.chunk.js.map": "/pushkar2gr8/aiesec_challenge/tree/gh-pages/index.html/static/js/1.697ed8e1.chunk.js.map",
-  "runtime~main.js": "/pushkar2gr8/aiesec_challenge/tree/gh-pages/index.html/static/js/runtime~main.6ad0bf4b.js",
-  "runtime~main.js.map": "/pushkar2gr8/aiesec_challenge/tree/gh-pages/index.html/static/js/runtime~main.6ad0bf4b.js.map",
-  "static/css/1.468c7371.chunk.css.map": "/pushkar2gr8/aiesec_challenge/tree/gh-pages/index.html/static/css/1.468c7371.chunk.css.map",
-  "static/css/main.9e02ac53.chunk.css.map": "/pushkar2gr8/aiesec_challenge/tree/gh-pages/index.html/static/css/main.9e02ac53.chunk.css.map",
-  "index.html": "/pushkar2gr8/aiesec_challenge/tree/gh-pages/index.html/index.html",
-  "precache-manifest.9ef56398a5792335ffdb64b22887a299.js": "/pushkar2gr8/aiesec_challenge/tree/gh-pages/index.html/precache-manifest.9ef56398a5792335ffdb64b22887a299.js",
-  "service-worker.js": "/pushkar2gr8/aiesec_challenge/tree/gh-pages/index.html/service-worker.js"
+  "main.css": "/aiesec_challenge/index.html/static/css/main.9e02ac53.chunk.css",
+  "main.js": "/aiesec_challenge/index.html/static/js/main.c3054a33.chunk.js",
+  "main.js.map": "/aiesec_challenge/index.html/static/js/main.c3054a33.chunk.js.map",
+  "static/css/1.468c7371.chunk.css": "/aiesec_challenge/index.html/static/css/1.468c7371.chunk.css",
+  "static/js/1.697ed8e1.chunk.js": "/aiesec_challenge/index.html/static/js/1.697ed8e1.chunk.js",
+  "static/js/1.697ed8e1.chunk.js.map": "/aiesec_challenge/index.html/static/js/1.697ed8e1.chunk.js.map",
+  "runtime~main.js": "/aiesec_challenge/index.html/static/js/runtime~main.295f7c41.js",
+  "runtime~main.js.map": "/aiesec_challenge/index.html/static/js/runtime~main.295f7c41.js.map",
+  "static/css/1.468c7371.chunk.css.map": "/aiesec_challenge/index.html/static/css/1.468c7371.chunk.css.map",
+  "static/css/main.9e02ac53.chunk.css.map": "/aiesec_challenge/index.html/static/css/main.9e02ac53.chunk.css.map",
+  "index.html": "/aiesec_challenge/index.html/index.html",
+  "precache-manifest.130d84cb7cd1e14b9e45e4e26a364867.js": "/aiesec_challenge/index.html/precache-manifest.130d84cb7cd1e14b9e45e4e26a364867.js",
+  "service-worker.js": "/aiesec_challenge/index.html/service-worker.js"
 }
