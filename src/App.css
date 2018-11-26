@@ -1,16 +1,15 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
 div.sticky {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+}
+
+input{
+  border-width: 1px;
+  width: 400px;
+  height: 30px;
+  border-radius: 5px;
+  border-style: solid
 }
 
 button:hover {
@@ -18,16 +17,7 @@ button:hover {
   color: white
 }
 .shadow {
-  -moz-box-shadow:    3px 3px 6px 5px #ccc;
-  -webkit-box-shadow: 3px 3px 6px 5px #ccc;
-  box-shadow:         3px 3px 6px 5px #ccc;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  -moz-box-shadow:    8px 8px 8px 4px #ccc;
+  -webkit-box-shadow: 8px 8px 8px 4px #ccc;
+  box-shadow:         8px 8px 8px 4px #ccc;
 }

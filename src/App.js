@@ -3,6 +3,9 @@ import GridList from '@material-ui/core/GridList';
 import './App.css';
 import TitleBar from './TitleBar';
 import Info from './Info'
+import Modal from "react-responsive-modal"
+import Calendar from "react-datepicker"
+import "react-datepicker/dist/react-datepicker.css";
 
 
 
@@ -11,8 +14,23 @@ class App extends Component {
   constructor(){
     super()
     this.state={
+      isVisible:true,
+      progress:false,
       isLoading:true,
-      data:""
+      data:"",
+      val:"",
+
+      //form data
+      title:"",
+      applications_close_date:"",
+      earliest_start_date:"",
+      latest_end_date:"",
+      description:"",
+      backgrounds:[],
+      skills:[],
+      selection_process:"",
+      salary:"",
+      city:"",
     }
   }
 
@@ -30,6 +48,30 @@ class App extends Component {
       isLoading:false,
       data:jsonData
     }))
+    .catch(error => alert(error))
+  }
+
+  patchData = async() => {
+
+    alert("loading")
+    await fetch("http://gisapi-web-staging-1636833739.eu-west-1.elb.amazonaws.com/v2/opportunities/6124?"+
+    "access_token=dd0df21c8af5d929dff19f74506c4a8153d7acd34306b9761fd4a57cfa1d483c"+
+    "&opportunity_id=6124"+
+    "&opportunity[title]="+this.state.title+
+    "&opportunity[applications_close_date]="+this.state.applications_close_date+
+    "&opportunity[earliest_start_date]="+this.state.earliest_start_date+
+    "&opportunity[description]="+this.state.description+
+    "&opportunity[role_info][selection_process]="+this.state.selection_process+
+    "&opportunity[specifics_info][salary]="+this.state.salary+
+    "&opportunity[role_info][city]="+this.state.city,{
+      method:"PATCH"
+    })
+    .then(data => data.json())
+    .then(jsonData => {
+      this.setState({
+        data:jsonData
+      })
+    })
     .catch(error => alert(error))
   }
 
@@ -64,8 +106,131 @@ class App extends Component {
             <div>
               <Info data={this.state.data}/>
             </div>
-            <div style={{height:500,width:437, marginLeft:10, backgroundColor:"#00b9ff"}}>
-            sfadfs
+            <div 
+              className="shadow"
+              style={{height:760, paddingLeft:20, paddingRight:20}}>
+
+                <b style={{display:"flex",justifyContent:"center", color:"#00b9ff", fontSize:"25", marginTop:10}}>
+                  {this.state.data.branch.organisation.name}
+                </b>
+
+                <b style={styles.formTitleText}>Title</b>
+                <div style={styles.editText}>
+                  <input 
+                    disabled={this.state.isVisible}
+                    placeholder="Title"
+                    type="text"
+                    onChange={(e) => this.setState({
+                      title:e.target.value
+                    })}/>
+                </div>
+
+                <b style={styles.formTitleText}>Start Date</b>
+                <div style={styles.editText}>
+                  <Calendar 
+                  disabled={this.state.isVisible}
+                  style={{marginTop:10, marginBottom:10}}
+                  selected={this.state.earliest_start_date}
+                  placeholderText="Select Start Date"
+                  onChange={(date) => this.setState({
+                    earliest_start_date:date
+                  })}/>
+                </div>
+
+                <b style={styles.formTitleText}>End Date</b>
+                <div style={styles.editText}>
+                  <Calendar 
+                  disabled={this.state.isVisible}
+                  style={{marginTop:10, marginBottom:10}}
+                  selected={this.state.applications_close_date}
+                  placeholderText="Select End Date"
+                  onChange={(date) => this.setState({
+                    applications_close_date:date
+                  })}/>
+                </div>
+
+                <b style={styles.formTitleText}>Description</b>
+                <div style={styles.editText}>
+                  <input 
+                    disabled={this.state.isVisible}
+                    placeholder="Description"
+                    type="text"
+                    onChange={(e) => this.setState({
+                      description:e.target.value
+                    })}/>
+                </div>
+
+                <b style={styles.formTitleText}>Background</b>
+                <div style={styles.editText}>
+                  <input 
+                    disabled={this.state.isVisible}
+                    placeholder="Background"
+                    type="text"
+                    onBlur={() => this.setState({
+                      backgrounds:this.state.backgrounds.concat({option:"preferred",name:this.state.val})
+                    })}
+                    onChange={(e) => this.setState({
+                      val: e.target.value
+                    })}/>
+                </div>
+
+                <b style={styles.formTitleText}>Skills</b>
+                <div style={styles.editText}>
+                  <input 
+                    disabled={this.state.isVisible}
+                    placeholder="Skills"
+                    type="text"
+                    onBlur={() => this.setState({
+                      skills:this.state.skills.concat({option:"preferred",name:this.state.val})
+                    })}
+                    onChange={(e) => this.setState({
+                      val: e.target.value
+                    })}/>
+                </div>
+
+                <b style={styles.formTitleText}>Selection Process</b>
+                <div style={styles.editText}>
+                  <input 
+                    disabled={this.state.isVisible}
+                    placeholder="Selection Process"
+                    type="text"
+                    onChange={(e) => this.setState({
+                      selection_process:e.target.value
+                    })}/>
+                </div>
+
+                <b style={styles.formTitleText}>Salary</b>
+                <div style={styles.editText}>
+                  <input 
+                    disabled={this.state.isVisible}
+                    placeholder="salary"
+                    type="number"
+                    onChange={(e) => this.setState({
+                      salary:parseInt(e.target.value)
+                    })}/>
+                </div>
+
+                <b style={styles.formTitleText}>City</b>
+                <div style={styles.editText}>
+                  <input 
+                    disabled={this.state.isVisible}
+                    placeholder="City"
+                    type="text"
+                    onChange={(e) => this.setState({
+                      city:e.target.value
+                    })}/>
+                </div>
+
+                <div style={{display:"flex", justifyContent:"space-between", margin:20}}>
+                    <button style={styles.saveButton} onClick={() => this.patchData()}>
+                      Save
+                    </button>
+                    <button style={styles.editButton} onClick={() => this.setState({
+                      isVisible:!this.state.isVisible
+                    })}>
+                      Edit
+                    </button>
+                </div>
             </div>
           </div>
           
@@ -148,7 +313,6 @@ class App extends Component {
           <div style={styles.similarOpportunities}>
             <i style={styles.similarTitleText}>Similar opportunities</i> 
           </div>
-        
         </div>
       );
     }
@@ -161,6 +325,11 @@ const styles = {
     flexDirection:"column",
     overflow:"auto"
   },
+
+  saveButton:{height:40, width:100, backgroundColor:"#00b9ff", color:"#fff", border:"none"},
+
+  editButton:{height:40, width:100, backgroundColor:"red", color:"#fff", border:"none"},
+
   titleContainer:{
     display:"flex",
     flexDirection:"column",
@@ -175,6 +344,12 @@ const styles = {
     display:"flex", 
     flexDirection:"row", 
     alignItems:"center"
+  },
+
+  editText:{
+    display:"flex", 
+    width:"100%",
+    justifyContent:"center"
   },
 
   titleInfoText:{
@@ -227,6 +402,12 @@ const styles = {
     fontSize:16,
     marginTop:10,
     color:"#505050"
+  },
+
+  formTitleText:{
+    display:"flex",
+    fontSize:14,
+    marginTop:20
   },
 
   programItem:{
