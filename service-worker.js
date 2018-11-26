@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/aiesec_challenge/precache-manifest.09be0b9e38d5baea6dec6d9e3102aa07.js"
+  "/aiesec_challenge/index.html/precache-manifest.130d84cb7cd1e14b9e45e4e26a364867.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/aiesec_challenge/index.html", {
+workbox.routing.registerNavigationRoute("/aiesec_challenge/index.html/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
