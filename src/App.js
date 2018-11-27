@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import GridList from '@material-ui/core/GridList';
 import './App.css';
 import TitleBar from './TitleBar';
 import Info from './Info'
-import moment from "moment"
 import "react-datepicker/dist/react-datepicker.css";
 
 
