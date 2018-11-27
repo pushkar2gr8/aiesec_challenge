@@ -3,8 +3,7 @@ import GridList from '@material-ui/core/GridList';
 import './App.css';
 import TitleBar from './TitleBar';
 import Info from './Info'
-import Modal from "react-responsive-modal"
-import Calendar from "react-datepicker"
+import moment from "moment"
 import "react-datepicker/dist/react-datepicker.css";
 
 
@@ -117,6 +116,7 @@ class App extends Component {
                 <b style={styles.formTitleText}>Title</b>
                 <div style={styles.editText}>
                   <input 
+                    required
                     disabled={this.state.isVisible}
                     placeholder="Title"
                     type="text"
@@ -127,31 +127,32 @@ class App extends Component {
 
                 <b style={styles.formTitleText}>Start Date</b>
                 <div style={styles.editText}>
-                  <Calendar 
-                  disabled={this.state.isVisible}
-                  style={{marginTop:10, marginBottom:10}}
-                  selected={this.state.earliest_start_date}
-                  placeholderText="Select Start Date"
-                  onChange={(date) => this.setState({
-                    earliest_start_date:date
-                  })}/>
+                    <input 
+                      type="date"
+                      required={this.state.isVisible}
+                      disabled={this.state.isVisible}
+                      placeholder="Select Start Date"
+                      onChange={(date) => this.setState({
+                        earliest_start_date:date
+                      })} />
                 </div>
 
                 <b style={styles.formTitleText}>End Date</b>
                 <div style={styles.editText}>
-                  <Calendar 
-                  disabled={this.state.isVisible}
-                  style={{marginTop:10, marginBottom:10}}
-                  selected={this.state.applications_close_date}
-                  placeholderText="Select End Date"
-                  onChange={(date) => this.setState({
-                    applications_close_date:date
-                  })}/>
+                  <input 
+                      type="date"
+                      required={this.state.isVisible}
+                      disabled={this.state.isVisible}
+                      placeholder="Select End Date"
+                      onChange={(date) => this.setState({
+                        applications_close_date:date
+                      })} />
                 </div>
 
                 <b style={styles.formTitleText}>Description</b>
                 <div style={styles.editText}>
                   <input 
+                    required
                     disabled={this.state.isVisible}
                     placeholder="Description"
                     type="text"
@@ -163,6 +164,7 @@ class App extends Component {
                 <b style={styles.formTitleText}>Background</b>
                 <div style={styles.editText}>
                   <input 
+                    required
                     disabled={this.state.isVisible}
                     placeholder="Background"
                     type="text"
@@ -177,6 +179,7 @@ class App extends Component {
                 <b style={styles.formTitleText}>Skills</b>
                 <div style={styles.editText}>
                   <input 
+                    required
                     disabled={this.state.isVisible}
                     placeholder="Skills"
                     type="text"
@@ -191,6 +194,7 @@ class App extends Component {
                 <b style={styles.formTitleText}>Selection Process</b>
                 <div style={styles.editText}>
                   <input 
+                    required
                     disabled={this.state.isVisible}
                     placeholder="Selection Process"
                     type="text"
@@ -202,6 +206,7 @@ class App extends Component {
                 <b style={styles.formTitleText}>Salary</b>
                 <div style={styles.editText}>
                   <input 
+                    required
                     disabled={this.state.isVisible}
                     placeholder="salary"
                     type="number"
@@ -213,6 +218,7 @@ class App extends Component {
                 <b style={styles.formTitleText}>City</b>
                 <div style={styles.editText}>
                   <input 
+                    required
                     disabled={this.state.isVisible}
                     placeholder="City"
                     type="text"
