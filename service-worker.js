@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/aiesec_challenge/precache-manifest.191a562bd5789b1b179810c444535f07.js"
+  "/aiesec_challenge/precache-manifest.da8efdbd1a454d014b42db55eec2b595.js"
 );
 
 workbox.clientsClaim();
