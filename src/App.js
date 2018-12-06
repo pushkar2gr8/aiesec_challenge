@@ -50,13 +50,13 @@ class App extends Component {
 
   patchData = async() => {
 
-    alert("loading")
+    this.setState({
+      isLoading:true
+    })
     await fetch("https://api-staging.aiesec.org/v2/opportunities/6124?"+
     "access_token=dd0df21c8af5d929dff19f74506c4a8153d7acd34306b9761fd4a57cfa1d483c"+
     "&opportunity_id=6124"+
     "&opportunity[title]="+this.state.title+
-    "&opportunity[applications_close_date]="+this.state.applications_close_date+
-    "&opportunity[earliest_start_date]="+this.state.earliest_start_date+
     "&opportunity[description]="+this.state.description+
     "&opportunity[role_info][selection_process]="+this.state.selection_process+
     "&opportunity[specifics_info][salary]="+this.state.salary+
@@ -65,7 +65,9 @@ class App extends Component {
     })
     .then(data => data.json())
     .then(jsonData => {
+      console.log(jsonData)
       this.setState({
+        isLoading:false,
         data:jsonData
       })
     })
@@ -108,7 +110,9 @@ class App extends Component {
               style={{height:760, paddingLeft:20, paddingRight:20}}>
 
                 <b style={{display:"flex",justifyContent:"center", color:"#00b9ff", fontSize:"25", marginTop:10}}>
-                  {this.state.data.branch.organisation.name}
+                  {this.state.data.branch.organisation.name === undefined 
+                    ? "NA" 
+                    :this.state.data.branch.organisation.name}
                 </b>
 
                 <b style={styles.formTitleText}>Title</b>
@@ -398,7 +402,6 @@ const styles = {
   programsContainer:{
     display:"flex", 
     flexDirection:'row', 
-    justifyContent:"space-between", 
     justifyContent:"center"
   },
 
