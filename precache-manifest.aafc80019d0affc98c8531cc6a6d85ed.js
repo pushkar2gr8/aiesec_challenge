@@ -4,15 +4,15 @@ self.__precacheManifest = [
     "url": "/aiesec_challenge/static/js/runtime~main.20459e0f.js"
   },
   {
-    "revision": "2c2ef70a1a62928354da",
-    "url": "/aiesec_challenge/static/js/main.2c2ef70a.chunk.js"
+    "revision": "2e33febf81ba3f6d7a54",
+    "url": "/aiesec_challenge/static/js/main.2e33febf.chunk.js"
   },
   {
     "revision": "9ceaa1413f86be89d124",
     "url": "/aiesec_challenge/static/js/1.9ceaa141.chunk.js"
   },
   {
-    "revision": "2c2ef70a1a62928354da",
+    "revision": "2e33febf81ba3f6d7a54",
     "url": "/aiesec_challenge/static/css/main.a8b4b49b.chunk.css"
   },
   {
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/aiesec_challenge/static/css/1.0272d5e8.chunk.css"
   },
   {
-    "revision": "f3fed545063c38e0d00688f31ba14d5b",
+    "revision": "ee1297d56a944325141d9af6667b3b5f",
     "url": "/aiesec_challenge/index.html"
   }
 ];
