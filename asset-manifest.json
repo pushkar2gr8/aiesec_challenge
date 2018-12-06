@@ -1,7 +1,7 @@
 {
   "main.css": "/aiesec_challenge/static/css/main.a8b4b49b.chunk.css",
-  "main.js": "/aiesec_challenge/static/js/main.23fa8be1.chunk.js",
-  "main.js.map": "/aiesec_challenge/static/js/main.23fa8be1.chunk.js.map",
+  "main.js": "/aiesec_challenge/static/js/main.2c2ef70a.chunk.js",
+  "main.js.map": "/aiesec_challenge/static/js/main.2c2ef70a.chunk.js.map",
   "static/css/1.0272d5e8.chunk.css": "/aiesec_challenge/static/css/1.0272d5e8.chunk.css",
   "static/js/1.9ceaa141.chunk.js": "/aiesec_challenge/static/js/1.9ceaa141.chunk.js",
   "static/js/1.9ceaa141.chunk.js.map": "/aiesec_challenge/static/js/1.9ceaa141.chunk.js.map",
@@ -10,6 +10,6 @@
   "static/css/1.0272d5e8.chunk.css.map": "/aiesec_challenge/static/css/1.0272d5e8.chunk.css.map",
   "static/css/main.a8b4b49b.chunk.css.map": "/aiesec_challenge/static/css/main.a8b4b49b.chunk.css.map",
   "index.html": "/aiesec_challenge/index.html",
-  "precache-manifest.25aa776c670af68297b56ca42baaf9bf.js": "/aiesec_challenge/precache-manifest.25aa776c670af68297b56ca42baaf9bf.js",
+  "precache-manifest.cdcb35703eea002f5b3d5ff979d23b1b.js": "/aiesec_challenge/precache-manifest.cdcb35703eea002f5b3d5ff979d23b1b.js",
   "service-worker.js": "/aiesec_challenge/service-worker.js"
 }
